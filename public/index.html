@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Summit</title>
+    <link rel="stylesheet" href="styles/generic.css">
+    <link rel="stylesheet" href="styles/about.css">
+    <link rel="stylesheet" href="styles/agenda.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/hero.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/registration.css">
+    <link rel="stylesheet" href="styles/speakers.css">
+    <link rel="stylesheet" href="styles/contactus.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Health Summit</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#agenda">Agenda</a></li>
+                <li><a href="#registration">Register</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <h1>Welcome to the Annual Health Summit</h1>
+            <p>Join us to explore the future of health and wellness!</p>
+            <button onclick="scrollToSection('registration-section')">Register Now</button>
+        </section>
+
+        <section id="about" class="section">
+            <h2>About the Summit</h2>
+            <p>The Health Summit brings together experts, leaders, and innovators in health and wellness to share insights and advancements in the field.</p>
+            <div class="about-content">
+              <div class="about-item">
+                  <img src="images/about-1.jpeg" alt="Health Experts" class="about-img">
+                  <h3>Expert Speakers</h3>
+                  <p>Meet industry-leading speakers who will share insights on the latest trends and innovations in healthcare.</p>
+              </div>
+              <div class="about-item">
+                  <img src="images/about-2.jpg" alt="Workshops" class="about-img">
+                  <h3>Interactive Workshops</h3>
+                  <p>Engage in hands-on sessions led by professionals to gain practical knowledge and skills.</p>
+              </div>
+              <div class="about-item">
+                  <img src="images/about-3.jpg" alt="Networking" class="about-img">
+                  <h3>Networking Opportunities</h3>
+                  <p>Connect with like-minded individuals and organizations to expand your professional network.</p>
+              </div>
+          </div>
+        </section>
+
+        <section id="agenda" class="section agenda-section">
+          <h2>Event Agenda</h2>
+          <p>Plan your day with the detailed schedule of the Health Summit. Join sessions that inspire and educate.</p>
+          <div class="agenda-table">
+              <div class="agenda-row">
+                  <div class="agenda-time">10:00 AM</div>
+                  <div class="agenda-details">
+                      <h3>Opening Remarks</h3>
+                      <p>Welcome and introduction to the event by the host.</p>
+                  </div>
+              </div>
+              <div class="agenda-row">
+                  <div class="agenda-time">11:00 AM</div>
+                  <div class="agenda-details">
+                      <h3>Keynote Speech</h3>
+                      <p>Insights into the future of health and wellness by our keynote speaker.</p>
+                  </div>
+              </div>
+              <div class="agenda-row">
+                  <div class="agenda-time">1:00 PM</div>
+                  <div class="agenda-details">
+                      <h3>Workshops & Panels</h3>
+                      <p>Interactive discussions and hands-on learning with industry experts.</p>
+                  </div>
+              </div>
+              <div class="agenda-row">
+                  <div class="agenda-time">3:00 PM</div>
+                  <div class="agenda-details">
+                      <h3>Networking Session</h3>
+                      <p>Engage with peers and professionals to build connections.</p>
+                  </div>
+              </div>
+          </div>
+      </section>
+      
+      <section id="speakers" class="section speakers-section">
+        <h2>Meet Our Speakers</h2>
+        <p>Get inspired by the thought leaders and experts shaping the future of healthcare.</p>
+        <div class="speakers-container">
+            <div class="speaker-card">
+                <img src="images/Speaker-1.png" alt="Speaker 1" class="speaker-photo">
+                <h3>Dr. ABC</h3>
+                <p>Saint Louis University.</p>
+                <p class="speaker-description">A leading expert in preventive medicine and community health initiatives.</p>
+            </div>
+            <div class="speaker-card">
+                <img src="images/Speaker-2.jpg" alt="Speaker 2" class="speaker-photo">
+                <h3>Mr. XYZ</h3>
+                <p>Saint Louis University</p>
+                <p class="speaker-description">Known for groundbreaking work in digital health solutions and AI-driven diagnostics.</p>
+            </div>
+            <div class="speaker-card">
+                <img src="images/Speaker-3.jpg" alt="Speaker 3" class="speaker-photo">
+                <h3>Dr. PQR</h3>
+                <p>Saint Louis University</p>
+                <p class="speaker-description">Specialist in public health policies and sustainable healthcare systems.</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="registration" class="section registration-section">
+      <h2>Register for the Health Summit</h2>
+      <p>Secure your spot at the most anticipated event of the year. Fill in your details below!</p>
+      <div class="registration-form-container">
+        <form id="registrationForm" class="registration-form"  action="/register" method="POST" >
+          <div class="form-group">
+                  <label for="fullName">Full Name</label>
+                  <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+              </div>
+              <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email" name="email" placeholder="Enter your email" required>
+              </div>
+              <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+              </div>
+              <div class="form-group">
+                  <label for="ticketType">Ticket Type</label>
+                  <select id="ticketType" name="ticketType" required>
+                      <option value="">Select a ticket type</option>
+                      <option value="general">General Admission</option>
+                      <option value="vip">VIP Access</option>
+                  </select>
+              </div>
+              <button type="submit" class="btn-submit">Register Now</button>
+          </form>
+      </div>
+  </section>
+  
+
+  <section id="contact" class="contact-section">
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+        <p>We’re here to help! Reach out to us using the details below.</p>
+
+        <div class="contact-details">
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <p>info@healthsummit.com</p>
+            </div>
+
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <h3>Phone</h3>
+                <p>+1 (123) 456-7890</p>
+            </div>
+
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Address</h3>
+                <p>123 Health Street, Health City, USA</p>
+            </div>
+        </div>
+
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <footer>
+        <p>© 2024 Health Summit. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="../server.js"></script>
+</body>
+</html>

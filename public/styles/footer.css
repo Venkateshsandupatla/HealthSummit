@@ -1,0 +1,35 @@
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #004a7c;
+  color: white;
+  padding: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #0077b6;
+      position: absolute;
+      top: 50px;
+      right: 10px;
+      width: 150px;
+      border-radius: 5px;
+  }
+
+  .hamburger {
+      display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+      padding: 30px 10px;
+  }
+
+  .section {
+      padding: 20px 10px;
+  }
+}
